@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+🟢 Huggin – Sistema de Coleta Inteligente de Tampinhas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🧩 Sobre o Projeto
 
-## Available Scripts
+O Huggin é um projeto de Internet das Coisas (IoT) integrado com desenvolvimento front-end, criado com o objetivo de incentivar a reciclagem de tampinhas plásticas de forma automatizada e interativa.
 
-In the project directory, you can run:
+O sistema reconhece o usuário através da leitura RFID no momento da entrega da tampinha, conectando automaticamente o dispositivo à conta do participante. Cada tampinha coletada é registrada e gera pontos, que podem ser acumulados e utilizados para recompensas ou benefícios.
 
-### `npm start`
+Além disso, a interface web permite ao usuário acompanhar:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Seu saldo de pontos em tempo real;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+O histórico de coletas;
 
-### `npm test`
+Informações ambientais sobre o impacto da reciclagem;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+E interagir com um sistema de gamificação, tornando o processo mais atrativo.
 
-### `npm run build`
+⚙️ Funcionalidades Principais
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Conexão automática via RFID entre tampinha e usuário.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Cadastro e login com CPF e senha.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Painel com pontuação acumulada e conquistas.
 
-### `npm run eject`
+Interface intuitiva desenvolvida com foco em usabilidade e sustentabilidade.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Integração entre hardware IoT e aplicação web.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🧠 Tecnologias Utilizadas
+💻 Front-End
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Bootstrap / Tailwind CSS
 
-## Learn More
+Vite
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+JavaScript / JSX
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔧 IoT
 
-### Code Splitting
+Arduino / ESP32
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Módulo RFID
 
-### Analyzing the Bundle Size
+Sensores de proximidade / peso (dependendo da configuração)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🌱 Objetivo do Projeto
 
-### Making a Progressive Web App
+Promover a consciência ambiental e a inovação tecnológica através de uma solução sustentável que estimula o hábito da reciclagem, unindo tecnologia, educação e responsabilidade social.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+O Huggin busca demonstrar como o uso de IoT pode ser aplicado em iniciativas sustentáveis, criando um impacto positivo tanto no meio ambiente quanto na comunidade.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) no SENAI, unindo práticas de TI e sustentabilidade.
