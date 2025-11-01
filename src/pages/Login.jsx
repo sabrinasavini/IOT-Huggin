@@ -15,8 +15,6 @@ const Login = ({ show, handleClose }) => {
     alert(`CPF: ${cpf}\nSenha: ${senha}\nLogin simulado!`);
     handleClose();
   };
-
-  // 🎨 Estilos centralizados
   const styles = {
     modalBody: {
       background: "#D5D5EE",

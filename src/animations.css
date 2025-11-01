@@ -1,55 +1,38 @@
-/* Importação da fonte no topo do arquivo */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-/* Aplicando a fonte globalmente */
 body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   font-family: 'Poppins', sans-serif;
 }
 
-/*
- * Animação "On-Scroll" (usada pelo react-intersection-observer)
- */
-
-/* Estado inicial (escondido) */
 .animate-hidden {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Estado final (visível) */
 .animate-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* * Efeitos de Hover
- */
-
-/* Botão flutuante */
 .btn-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra sutil */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Zoom suave nos cards */
 .card-hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
-  transform: scale(1.05); /* Usando o seu valor de scale */
-  box-shadow: 0 8px 20px rgba(63, 63, 163, 0.2); /* Sombra mais forte */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(63, 63, 163, 0.2);
 }
 
-/* * Estilos do Header/Navbar (Seus estilos)
- */
-
-/* Logo hover animation */
 .logo-animate {
   transition: transform 0.3s ease;
 }
@@ -58,7 +41,6 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   transform: scale(1.1);
 }
 
-/* Links do menu - moderno */
 .nav-link-modern {
   color: #3F3FA3;
   font-weight: 500;
@@ -88,7 +70,7 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   width: 100%;
 }
 
-/* Para mobile: suaviza o menu colapsado */
+
 .navbar-light .navbar-toggler {
   border-color: #3F3FA3;
 }
@@ -96,7 +78,6 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(63,63,163)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-/* 🌿 Animação genérica e elegante (flutuação suave) */
 @keyframes smoothFloat {
   0% {
     transform: translateY(0);
@@ -130,7 +111,6 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   animation: floatY 3s ease-in-out infinite;
 }
 
-/* Animação leve da imagem flutuante */
 .image-float {
   animation: float 4s ease-in-out infinite;
 }
@@ -140,7 +120,6 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   50% { transform: translateY(-15px); }
 }
 
-/* Gradiente animado para o Hero */
 .animated-gradient {
   background: linear-gradient(270deg, #3F3FA3, #B4B4D5, #A4A4E5);
   background-size: 600% 600%;
@@ -168,14 +147,12 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   opacity: 0;
   transform: translateY(50px);
 }
-/* Remove borda branca e fundo padrão do Modal */
 .login-modal .modal-content {
   background-color: transparent;
   border: none;
   box-shadow: none;
 }
 
-/* Estiliza o conteúdo interno do modal */
 .login-content {
   background-color: #D5D5EE;
   border-radius: 20px;

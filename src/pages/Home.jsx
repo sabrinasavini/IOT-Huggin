@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Row, Col, Button, Card, Container } from "react-bootstrap";
 import { FaRecycle, FaHandsHelping, FaBullhorn } from "react-icons/fa";
 import iconHuggin from "../assets/icon-huggin.png";
-import Login from "./Login"; // Import do componente de login
+import Login from "./Login";
 import "../animations.css";
 
 const WaveDivider = ({ color }) => (
@@ -21,7 +21,6 @@ const Home = () => {
 
   return (
     <div style={{ overflowX: "hidden", width: "100%", margin: 0, padding: 0 }}>
-      {/* Hero Section */}
       <section
         className="text-white text-center d-flex align-items-center justify-content-center animated-gradient"
         id="home"
@@ -77,8 +76,6 @@ const Home = () => {
       <div style={{ transform: "rotate(180deg)" }}>
         <WaveDivider color="#B4B4D5" />
       </div>
-
-      {/* Como Ajudar Section */}
       <section className="py-5" id="how" style={{ backgroundColor: "#B4B4D5" }}>
         <Container>
           <h2 className="text-center mb-5" style={{ color: "#3F3FA3" }}>Como Você Pode Ajudar</h2>
@@ -100,7 +97,6 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* Componente de Login */}
       <Login show={showLogin} handleClose={handleCloseLogin} />
     </div>
   );

@@ -16,7 +16,7 @@ const Header = () => {
       sticky="top"
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="home">
           <img
             src={logo}
             alt="Huggin Tampinhas"
@@ -28,7 +28,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home" className="nav-link-modern">Início</Nav.Link>
+            <Nav.Link href="home" className="nav-link-modern">Início</Nav.Link>
             <Nav.Link href="#about" className="nav-link-modern">Sobre</Nav.Link>
             <Nav.Link href="#how" className="nav-link-modern">Como Ajudar</Nav.Link>
           </Nav>
