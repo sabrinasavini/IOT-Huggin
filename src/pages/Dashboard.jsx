@@ -1,31 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Card, Button, Form, Row, Col, ProgressBar } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import "../css/animations.css";
 
-// Função simulada para buscar dados do usuário (substituir futuramente por API/RFID)
+// --- Suas funções (fetchTampinhas, postTampinhas) ---
 const fetchTampinhas = async (userId) => {
-  // Simula requisição ao backend
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(120); // Exemplo: usuário já tem 120 tampinhas cadastradas
+      resolve(120); 
     }, 500);
   });
 };
 
-// Função simulada para enviar novas tampinhas
 const postTampinhas = async (userId, quantidade) => {
-  // Substituir futuramente por API/RFID
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(true); // Sucesso
+      resolve(true);
     }, 300);
   });
 };
+// --- Fim das Funções ---
+
 
 const Dashboard = ({ userName, userId }) => {
+  // --- Sua Lógica (useState, useEffect, etc.) ---
   const [tampinhas, setTampinhas] = useState(0);
   const [novaTampinhas, setNovaTampinhas] = useState("");
+  const navigate = useNavigate(); 
 
-  // Buscar tampinhas do usuário ao montar componente
   useEffect(() => {
     const loadTampinhas = async () => {
       const qtd = await fetchTampinhas(userId);
@@ -53,13 +55,20 @@ const Dashboard = ({ userName, userId }) => {
   const progresso = Math.min((tampinhas / meta) * 100, 100);
 
   return (
-    <div style={{ padding: "2rem", backgroundColor: "#D5D5EE", minHeight: "100vh" }}>
-      <h2 style={{ color: "#3F3FA3", marginBottom: "2rem" }}>Olá, {userName}!</h2>
+    <div
+      style={{ padding: "2rem", backgroundColor: "#D5D5EE", minHeight: "100vh" }}
+    >
+      <h2 
+        className="anim-item-title" 
+        style={{ color: "#3F3FA3", marginBottom: "2rem" }}
+      >
+        Olá, {userName}!
+      </h2>
 
       <Row className="g-4">
-        {/* Card de quantidade de tampinhas */}
         <Col md={6}>
           <Card
+            className="anim-item-card1"
             style={{
               backgroundColor: "#A4A4E5",
               color: "#fff",
@@ -76,12 +85,26 @@ const Dashboard = ({ userName, userId }) => {
               style={{ height: "25px", borderRadius: "12px" }}
               variant="light"
             />
+            <Button
+              onClick={() => navigate("/historico")}
+              style={{
+                marginTop: "1rem",
+                background: "#3F3FA3",
+                color: "#fff",
+                borderRadius: "12px",
+                fontWeight: "600",
+                padding: "0.5rem 1.2rem",
+                border: "none",
+              }}
+            >
+              Ver todas as tampinhas
+            </Button>
           </Card>
         </Col>
 
-        {/* Card para adicionar tampinhas */}
         <Col md={6}>
           <Card
+            className="anim-item-card2"
             style={{
               backgroundColor: "#fff",
               color: "#3F3FA3",

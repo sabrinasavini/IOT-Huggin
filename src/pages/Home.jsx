@@ -3,7 +3,7 @@ import { Row, Col, Button, Card, Container } from "react-bootstrap";
 import { FaRecycle, FaHandsHelping, FaBullhorn } from "react-icons/fa";
 import iconHuggin from "../assets/icon-huggin.png";
 import Login from "./Login";
-import "../animations.css";
+import "../css/animations.css";
 
 const WaveDivider = ({ color }) => (
   <div style={{ lineHeight: 0, overflow: "hidden" }}>

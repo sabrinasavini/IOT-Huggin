@@ -159,3 +159,108 @@ body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
+
+.dashboard-container {
+  padding: 2rem;
+  background-color: #D5D5EE;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  color: #3F3FA3;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-card {
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+  border: none;
+  height: 100%; 
+}
+
+.status-card {
+  background-color: #A4A4E5;
+  color: #fff;
+}
+
+.status-card-total {
+  font-size: 3rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.status-card-progress {
+  height: 25px;
+  border-radius: 12px;
+}
+
+.btn-historico {
+  margin-top: 1rem;
+  background: #3F3FA3;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-historico:hover {
+  background: #2c2c7c;
+}
+
+.add-card {
+  background-color: #fff;
+  color: #3F3FA3;
+}
+
+.input-qtd {
+  border-radius: 12px;
+}
+
+.btn-adicionar {
+  background: linear-gradient(90deg, #3F3FA3, #A4A4E5);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-adicionar:hover {
+   transform: scale(1.03);
+   box-shadow: 0 4px 10px rgba(63, 63, 163, 0.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-item-title,
+.anim-item-card1,
+.anim-item-card2 {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.anim-item-title {
+  animation-delay: 0.1s;
+}
+
+.anim-item-card1 {
+  animation-delay: 0.2s;
+}
+
+.anim-item-card2 {
+  animation-delay: 0.3s;
+}
