@@ -45,13 +45,13 @@ Arduino / ESP32
 
 Módulo RFID
 
-Sensores de proximidade / peso (dependendo da configuração)
+Sensores de proximidade
 
 🌱 Objetivo do Projeto
 
 Promover a consciência ambiental e a inovação tecnológica através de uma solução sustentável que estimula o hábito da reciclagem, unindo tecnologia, educação e responsabilidade social.
 
-O Huggin busca demonstrar como o uso de IoT pode ser aplicado em iniciativas sustentáveis, criando um impacto positivo tanto no meio ambiente quanto na comunidade.
+Este projeto busca demonstrar como o uso de IoT pode ser aplicado em iniciativas sustentáveis, criando um impacto positivo tanto no meio ambiente quanto na comunidade.
 
 
-Projeto desenvolvido como Trabalho de Conclusão de Curso (TCC) no SENAI, unindo práticas de TI e sustentabilidade.
+Desenvolvido como Trabalho de Conclusão de Curso (TCC) no SENAI, unindo práticas de TI e sustentabilidade.
