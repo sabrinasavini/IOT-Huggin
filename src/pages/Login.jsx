@@ -1,5 +1,77 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import { Modal, Button, Form } from "react-bootstrap";
+
+const StyledModalBody = styled(Modal.Body)`
+  background: #d5d5ee;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+`;
+
+const Title = styled.h3`
+  color: #3f3fa3;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+`;
+
+const StyledLabel = styled(Form.Label)`
+  color: #3f3fa3;
+  font-weight: 600;
+`;
+
+const StyledInput = styled(Form.Control)`
+  border-radius: 12px;
+  border: 2px solid #3f3fa3;
+  padding: 0.75rem;
+  font-weight: 500;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+
+  &:focus {
+    outline: none;
+    border-color: #a4a4e5;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1),
+      0 0 0 3px rgba(63, 63, 163, 0.2);
+  }
+`;
+
+const LoginButton = styled(Button)`
+  background: linear-gradient(90deg, #3f3fa3, #a4a4e5);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s all;
+  width: 100%;
+  margin-bottom: 1rem; 
+  &:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.25);
+  }
+`;
+
+const ForgotText = styled.div`
+  color: #3f3fa3;
+  font-size: 0.9rem;
+  text-align: center;
+`;
+
+const ForgotLink = styled.a`
+  color: #a4a4e5;
+  text-decoration: none;
+  font-weight: 600;
+
+  &:hover {
+    color: #3f3fa3;
+    text-decoration: underline;
+  }
+`;
+
 
 const Login = ({ show, handleClose }) => {
   const [cpf, setCpf] = useState("");
@@ -15,48 +87,6 @@ const Login = ({ show, handleClose }) => {
     alert(`CPF: ${cpf}\nSenha: ${senha}\nLogin simulado!`);
     handleClose();
   };
-  const styles = {
-    modalBody: {
-      background: "#D5D5EE",
-      borderRadius: "20px",
-      padding: "2rem",
-      boxShadow: "0 10px 25px rgba(0,0,0,0.2)",
-    },
-    title: {
-      color: "#3F3FA3",
-      fontWeight: "700",
-    },
-    label: {
-      color: "#3F3FA3",
-      fontWeight: "600",
-    },
-    input: {
-      borderRadius: "12px",
-      border: "2px solid #3F3FA3",
-      padding: "0.75rem",
-      fontWeight: "500",
-      boxShadow: "inset 0 2px 5px rgba(0,0,0,0.1)",
-      transition: "0.3s",
-    },
-    button: {
-      background: "linear-gradient(90deg, #3F3FA3, #A4A4E5)",
-      color: "#fff",
-      fontWeight: "600",
-      padding: "0.75rem",
-      borderRadius: "12px",
-      border: "none",
-      boxShadow: "0 5px 15px rgba(0,0,0,0.2)",
-      transition: "0.3s all",
-    },
-    forgotText: {
-      color: "#3F3FA3",
-      fontSize: "0.9rem",
-    },
-    forgotLink: {
-      color: "#A4A4E5",
-      textDecoration: "none",
-    },
-  };
 
   return (
     <Modal
@@ -68,52 +98,41 @@ const Login = ({ show, handleClose }) => {
       dialogClassName="login-modal"
       contentClassName={`login-content ${animate ? "animate-in" : "animate-out"}`}
     >
-      <Modal.Body style={styles.modalBody}>
-        <h3 className="text-center mb-4" style={styles.title}>
-          Entrar na Conta
-        </h3>
+      <StyledModalBody>
+        <Title>Entrar na Conta</Title>
 
         <Form onSubmit={handleLogin}>
           <Form.Group className="mb-3">
-            <Form.Label style={styles.label}>CPF</Form.Label>
-            <Form.Control
+            <StyledLabel>CPF</StyledLabel>
+            <StyledInput
               type="text"
               placeholder="000.000.000-00"
               value={cpf}
               onChange={(e) => setCpf(e.target.value)}
-              style={styles.input}
             />
           </Form.Group>
 
           <Form.Group className="mb-4">
-            <Form.Label style={styles.label}>Senha</Form.Label>
-            <Form.Control
+            <StyledLabel>Senha</StyledLabel>
+            <StyledInput
               type="password"
               placeholder="Digite sua senha"
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
-              style={styles.input}
             />
           </Form.Group>
 
-          <Button
+          <LoginButton
             type="submit"
-            className="w-100 mb-3"
-            style={styles.button}
-            onMouseEnter={(e) => (e.target.style.filter = "brightness(1.1)")}
-            onMouseLeave={(e) => (e.target.style.filter = "brightness(1)")}
           >
             Entrar
-          </Button>
+          </LoginButton>
 
-          <div className="text-center" style={styles.forgotText}>
-            Esqueceu a senha?{" "}
-            <a href="#" style={styles.forgotLink}>
-              Clique aqui
-            </a>
-          </div>
+          <ForgotText>
+            Esqueceu a senha? <ForgotLink href="#">Clique aqui</ForgotLink>
+          </ForgotText>
         </Form>
-      </Modal.Body>
+      </StyledModalBody>
     </Modal>
   );
 };
