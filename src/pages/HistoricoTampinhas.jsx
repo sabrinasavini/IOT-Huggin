@@ -10,7 +10,6 @@ const HistoricoTampinhas = ({ userId }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // ... (seu useEffect permanece o mesmo) ...
     const mockHistorico = [
       { data: "2025-11-01", hora: "09:42" },
       { data: "2025-10-30", hora: "14:15" },
@@ -36,7 +35,6 @@ const HistoricoTampinhas = ({ userId }) => {
         Voltar
       </Button>
       
-      {/* O CSS vai animar este card automaticamente */}
       <Card className="historico-card">
         <div className="historico-lista">
           
@@ -45,9 +43,6 @@ const HistoricoTampinhas = ({ userId }) => {
               key={item.id} 
               className="tampinha-item anim-item"
               
-              /* ===== MUDANÇA AQUI ===== 
-                 Mudamos o delay base de 0.3s para 0.4s 
-              */
               style={{ animationDelay: `${0.4 + index * 0.1}s` }} 
             >
               

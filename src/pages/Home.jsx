@@ -5,13 +5,49 @@ import iconHuggin from "../assets/icon-huggin.png";
 import Login from "./Login";
 import "../css/animations.css";
 
-const WaveDivider = ({ color }) => (
+const WaveDivider = ({ color = "#ffffff" }) => (
   <div style={{ lineHeight: 0, overflow: "hidden" }}>
-    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: "100px" }}>
-      <path fill={color || "#ffffff"} fillOpacity="1" d="M0,192L48,181.3C96,171,192,149,288,160C384,171,480,213,576,240C672,267,768,277,864,250.7C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320H0Z"></path>
-    </svg>
+    <div
+      style={{
+        display: "flex",
+        width: "200%",
+        animation: "wave-slide 12s linear infinite",
+      }}
+    >
+      <svg
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        style={{ width: "50%", height: "120px", display: "block" }}
+      >
+        <path
+          fill={color}
+          d="M0,160 C240,80 480,240 720,160 C960,80 1200,240 1440,160 L1440,320 L0,320 Z"
+        ></path>
+      </svg>
+
+      <svg
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        style={{ width: "50%", height: "120px", display: "block" }}
+      >
+        <path
+          fill={color}
+          d="M0,160 C240,80 480,240 720,160 C960,80 1200,240 1440,160 L1440,320 L0,320 Z"
+        ></path>
+      </svg>
+    </div>
+
+    <style>
+      {`
+        @keyframes wave-slide {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}
+    </style>
   </div>
 );
+
 
 const Home = () => {
   const [showLogin, setShowLogin] = useState(false);
@@ -46,8 +82,6 @@ const Home = () => {
       </section>
 
       <WaveDivider color="#D5D5EE" />
-
-      {/* Sobre Section */}
       <section className="py-5 d-flex align-items-center justify-content-center" id="about" style={{ backgroundColor: "#D5D5EE", minHeight: "400px" }}>
         <Container>
           <Row className="align-items-center justify-content-center g-4">
@@ -74,9 +108,10 @@ const Home = () => {
       </section>
 
       <div style={{ transform: "rotate(180deg)" }}>
-        <WaveDivider color="#B4B4D5" />
+        <WaveDivider color="#D5D5EE" /> 
       </div>
-      <section className="py-5" id="how" style={{ backgroundColor: "#B4B4D5" }}>
+      
+      <section className="py-5" id="how" style={{ backgroundColor: "#D5D5EE" }}>
         <Container>
           <h2 className="text-center mb-5" style={{ color: "#3F3FA3" }}>Como Você Pode Ajudar</h2>
           <Row className="g-4 justify-content-center">
