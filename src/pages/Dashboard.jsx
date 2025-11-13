@@ -20,7 +20,6 @@ const float = keyframes`
 `;
 
 const GlobalStyle = createGlobalStyle`
-  /* Importar a fonte */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
   body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link, input, button {
