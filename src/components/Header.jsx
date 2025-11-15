@@ -3,7 +3,6 @@ import styled, { createGlobalStyle, keyframes } from "styled-components";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from "../assets/logo.png";
 
-/* 🌍 Fonte global (igual ao CSS original) */
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
   body, h1, h2, h3, h4, h5, h6, p, .btn, .card-title, .nav-link {
@@ -11,13 +10,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-/* ✨ Animação suave de entrada (como no seu CSS: fadeInUp) */
 const fadeInUp = keyframes`
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 `;
 
-/* 🌈 Navbar estilizada */
 const StyledNavbar = styled(Navbar)`
   background-color: #fff !important;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -35,7 +32,6 @@ const StyledNavbar = styled(Navbar)`
   }
 `;
 
-/* 🖼️ Logo — agora idêntica à sua .logo-animate (só anima no hover) */
 const BrandLogo = styled.img`
   height: 50px;
   width: auto;
@@ -46,7 +42,6 @@ const BrandLogo = styled.img`
   }
 `;
 
-/* 🔗 Links com sublinhado animado e transição de cor */
 const StyledNavLink = styled(Nav.Link)`
   color: #3F3FA3 !important;
   font-weight: 500;
